@@ -11,4 +11,13 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.18.233/g' package/base-files/files/bin/config_generate
+
+#
+sed -i 's/OpenWrt/MyWifi/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+#
+sed -i 's/OpenWrt/Android/g' package/base-files/files/bin/config_generate
+
+#
+sed -i 's/root::0:0:99999:7:::/root:$1$GyjfJ6CQ$jY1lhqaLYamKtOh91SAZi0:19104:0:99999:7:::/g' package/base-files/files/etc/shadow
